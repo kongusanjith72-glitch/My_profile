@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" width="400" height="440">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0a0f1d" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="10" y="10" width="380" height="420" rx="28" fill="url(#bgGrad)" />
+  <rect x="10" y="10" width="380" height="420" rx="28" fill="url(#glowGrad)" />
+  <rect x="12" y="12" width="376" height="416" rx="26" fill="none" stroke="url(#borderGrad)" stroke-width="2" stroke-opacity="0.4" />
+
+  <!-- Avatar Halo -->
+  <circle cx="200" cy="170" r="95" fill="none" stroke="url(#borderGrad)" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.5" />
+  <circle cx="200" cy="170" r="82" fill="#182136" />
+
+  <!-- Silhouette Icon -->
+  <g fill="url(#avatarGrad)" opacity="0.9">
+    <!-- Head -->
+    <circle cx="200" cy="142" r="38" />
+    <!-- Shoulders -->
+    <path d="M142,228 C142,192 166,182 200,182 C234,182 258,192 258,228 Z" />
+  </g>
+
+  <!-- Code Symbol Floating Badge -->
+  <g transform="translate(250, 210)">
+    <rect width="44" height="44" rx="12" fill="#0f172a" stroke="#8b5cf6" stroke-width="2" />
+    <text x="22" y="27" fill="#a78bfa" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+
+  <!-- Text Details -->
+  <text x="200" y="300" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="0.5">Sanjith Kalithasan</text>
+  <text x="200" y="326" text-anchor="middle" fill="#93c5fd" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Frontend Developer | MCA</text>
+
+  <!-- Placeholder notice badge -->
+  <g transform="translate(70, 355)">
+    <rect width="260" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="130" y="22" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">Profile Photo Placeholder</text>
+  </g>
+</svg>

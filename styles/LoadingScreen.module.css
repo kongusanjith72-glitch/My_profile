@@ -1,0 +1,121 @@
+.loaderOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  pointer-events: all;
+}
+
+.loaderOverlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.initialsBadge {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  margin-bottom: 1.25rem;
+}
+
+.initialsBadge::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 23px;
+  background: var(--accent-gradient);
+  z-index: -1;
+  opacity: 0.8;
+  animation: pulseGlow 1.4s ease-in-out infinite alternate;
+}
+
+.initialsText {
+  font-size: 2rem;
+  font-weight: 900;
+  background: var(--accent-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.05em;
+}
+
+.nameText {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.roleText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-blue-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.loadingLine {
+  width: 120px;
+  height: 3px;
+  background: var(--border-subtle);
+  border-radius: 9999px;
+  margin-top: 1.25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.loadingProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--accent-gradient);
+  animation: loadProgress 1.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes loadProgress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loaderOverlay {
+    display: none !important;
+  }
+}
