@@ -1,0 +1,347 @@
+/* ==========================================================================
+   Resume Webpage Styles – Clean White, High Contrast Professional Document
+   ========================================================================== */
+
+.pageWrapper {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 2rem 1rem 4rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light;
+}
+
+/* Floating / Sticky Control Bar */
+.topBar {
+  max-width: 860px;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.topBarActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.backBtn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #1d4ed8;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.downloadBtn:hover {
+  background: #1d4ed8;
+}
+
+.printBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.printBtn:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Resume Document Sheet (A4 Proportion) */
+.resumeSheet {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3.5rem 3.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border-radius: 8px;
+}
+
+/* Document Header */
+.docHeader {
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.nameTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.contactLine {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.contactLinksGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 0.25rem;
+  column-gap: 0.75rem;
+  font-size: 0.925rem;
+  margin-top: 0.5rem;
+}
+
+.linkLabel {
+  font-weight: 600;
+  color: #1e293b;
+  min-width: 80px;
+}
+
+.linkValue {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+
+.linkValue:hover {
+  color: #1d4ed8;
+}
+
+/* Common Section Layout */
+.sectionBlock {
+  margin-bottom: 1.6rem;
+}
+
+.sectionHeading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #0f172a;
+  border-bottom: 1.5px solid #0f172a;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.objectiveText {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #1e293b;
+  text-align: justify;
+}
+
+/* Education Table / List */
+.eduItem {
+  margin-bottom: 1rem;
+}
+
+.eduHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.eduDegree {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.eduYears {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.eduInstitute {
+  font-size: 0.925rem;
+  color: #334155;
+  margin-top: 0.15rem;
+}
+
+.eduScore {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 0.2rem;
+}
+
+/* Internship */
+.internshipItem {
+  margin-bottom: 1rem;
+}
+
+.bulletList {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bulletItem {
+  font-size: 0.935rem;
+  line-height: 1.6;
+  color: #1e293b;
+  text-align: justify;
+}
+
+/* Project */
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.projectRow {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  font-size: 0.935rem;
+  line-height: 1.6;
+}
+
+.rowLabel {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.rowValue {
+  color: #1e293b;
+  text-align: justify;
+}
+
+/* Two-Column Grid for Skills / Additional sections */
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Declaration */
+.declarationBlock {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #cbd5e1;
+}
+
+.declarationText {
+  font-size: 0.935rem;
+  line-height: 1.6;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.signatureRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.signItem {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   Responsive & Print Styles
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 1rem 0.5rem 3rem 0.5rem;
+  }
+
+  .resumeSheet {
+    padding: 2rem 1.5rem;
+  }
+
+  .nameTitle {
+    font-size: 1.75rem;
+  }
+
+  .twoColGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .projectRow {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+
+@media print {
+  .topBar {
+    display: none !important;
+  }
+
+  .pageWrapper {
+    background: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  .resumeSheet {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .resumeSheet a {
+    color: #0f172a !important;
+    text-decoration: none !important;
+  }
+}

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { personalInfo, heroData } from "../data/portfolioData";
-import { IconArrowRight, IconMail, IconDownload } from "./Icons";
+import { IconArrowRight, IconMail, IconCertificate } from "./Icons";
 import styles from "../styles/Hero.module.css";
 
 export default function Hero() {
@@ -103,19 +103,16 @@ export default function Hero() {
               <IconMail size={16} />
               {heroData.ctaContact}
             </a>
-            {personalInfo.resumeUrl && (
-              <a
-                href={personalInfo.resumeUrl}
-                download="Sanjith_Resume.pdf"
-                className={styles.btnSecondary}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Download Sanjith Kalithasan's Resume"
-              >
-                <IconDownload size={16} />
-                Download Resume
-              </a>
-            )}
+            <a
+              href="/resume"
+              className={styles.btnSecondary}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Sanjith Kalithasan's Resume"
+            >
+              <IconCertificate size={16} />
+              View Resume
+            </a>
           </div>
         </div>
 

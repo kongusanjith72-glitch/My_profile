@@ -27,6 +27,7 @@ export const personalInfo = {
     "To become a skilled Frontend Developer and build modern, responsive, user-friendly web applications while continuously improving my technical skills and contributing to innovative projects.",
   profilePhoto: "/sanjith-kalithasan.jpg",
   resumeUrl: "/Sanjith_Resume.pdf",
+  resumePageUrl: "/resume",
 };
 
 export const heroData = {

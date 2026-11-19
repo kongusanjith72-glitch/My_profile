@@ -1,14 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "../styles/LoadingScreen.module.css";
 import { personalInfo } from "../data/portfolioData";
 
 export default function LoadingScreen() {
+  const pathname = usePathname();
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    if (pathname?.startsWith("/resume")) {
+      setLoading(false);
+      return;
+    }
     setMounted(true);
     // Short professional KS initials loading experience (850ms)
     const timer = setTimeout(() => {
@@ -16,9 +22,9 @@ export default function LoadingScreen() {
     }, 850);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [pathname]);
 
-  if (!mounted) {
+  if (!mounted || pathname?.startsWith("/resume")) {
     return null;
   }
 

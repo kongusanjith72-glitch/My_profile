@@ -2,15 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 import { personalInfo, navLinks } from "../data/portfolioData";
 import styles from "../styles/Navbar.module.css";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (pathname?.startsWith("/resume")) return;
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setScrolled(true);
@@ -51,6 +54,10 @@ export default function Navbar() {
       window.history.pushState(null, "", href);
     }
   };
+
+  if (pathname?.startsWith("/resume")) {
+    return null;
+  }
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>

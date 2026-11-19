@@ -1,11 +1,17 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { personalInfo, navLinks } from "../data/portfolioData";
 import { IconLinkedIn, IconGitHub, IconMail, IconLocation } from "./Icons";
 import styles from "../styles/Footer.module.css";
 
 export default function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  if (pathname?.startsWith("/resume")) {
+    return null;
+  }
 
   const handleScrollTo = (e, href) => {
     e.preventDefault();

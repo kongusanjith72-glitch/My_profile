@@ -1,13 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { IconArrowUp } from "./Icons";
 import styles from "../styles/BackToTop.module.css";
 
 export default function BackToTop() {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (pathname?.startsWith("/resume")) return;
     const checkScroll = () => {
       if (window.scrollY > 300) {
         setVisible(true);
@@ -18,7 +21,11 @@ export default function BackToTop() {
 
     window.addEventListener("scroll", checkScroll, { passive: true });
     return () => window.removeEventListener("scroll", checkScroll);
-  }, []);
+  }, [pathname]);
+
+  if (pathname?.startsWith("/resume")) {
+    return null;
+  }
 
   const scrollToTop = () => {
     window.scrollTo({
