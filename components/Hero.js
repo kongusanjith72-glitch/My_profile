@@ -106,7 +106,7 @@ export default function Hero() {
             {personalInfo.resumeUrl && (
               <a
                 href={personalInfo.resumeUrl}
-                download="Sanjith_Kalithasan_Resume.pdf"
+                download="Sanjith_Resume.pdf"
                 className={styles.btnSecondary}
                 target="_blank"
                 rel="noopener noreferrer"

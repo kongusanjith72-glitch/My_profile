@@ -23,7 +23,7 @@ Built with **Next.js (JavaScript)**, external **CSS Modules**, and custom SVG ic
   - Web Development Internship at the National Small Industries Corporation (NSIC).
   - Clean project showcase without unverified links or placeholder screenshots.
   - Diploma in Computer Application (DCA) from Computer Software College (CSC).
-- **Resume Download:** Direct link to your resume (`public/resume.pdf` & `public/assets/resume.pdf`).
+- **Resume Download:** Direct link to your resume (`public/Sanjith_Resume.pdf`).
 - **Profile Photograph:** Portrait integrated in Hero & About sections (`public/sanjith-kalithasan.jpg`).
 - **SEO & Social Sharing:** Full Open Graph metadata, semantic HTML5 tags, accessibility labels, and custom favicon.
 - **Custom 404 Page:** Dedicated 404 error page with quick navigation back to home.
