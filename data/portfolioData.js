@@ -178,20 +178,43 @@ export const whatICanDo = [
   },
 ];
 
-export const internshipExperience = {
-  organization: "National Small Industries Corporation (NSIC)",
-  role: "Web Development Intern",
-  highlights: [
-    "Gained practical experience in frontend web development.",
-    "Worked with HTML, CSS and JavaScript.",
-    "Learned to create responsive and user-friendly website layouts.",
-    "Practised DOM manipulation and CSS Flexbox.",
-    "Gained exposure to Git and GitHub.",
-    "Participated in teamwork, code reviews and basic UI bug fixing.",
-  ],
-  takeaway:
-    "Strengthened practical frontend development capabilities and collaborative coding workflows through guided industry training.",
-};
+export const internshipExperiences = [
+  {
+    organization: "ProcessDrive India",
+    role: "Frontend Developer Intern",
+    duration: "1 Month",
+    type: "Internship",
+    description:
+      "Completed a one-month Frontend Development internship at ProcessDrive India, gaining practical exposure to modern web development and user interface design.",
+    highlights: [
+      "Worked on frontend development concepts and website design.",
+      "Improved knowledge of HTML, CSS, and JavaScript.",
+      "Explored React and modern frontend development practices.",
+      "Learned about responsive web design and user-friendly interfaces.",
+      "Gained practical experience in developing and improving web interfaces.",
+      "Improved problem-solving and development skills.",
+    ],
+  },
+  {
+    organization: "National Small Industries Corporation (NSIC)",
+    role: "Web Development Intern",
+    type: "Internship",
+    description:
+      "Gained practical exposure to foundational frontend web engineering, responsive layout patterns, and version control workflows.",
+    highlights: [
+      "Gained practical experience in frontend web development.",
+      "Worked with HTML, CSS and JavaScript.",
+      "Learned to create responsive and user-friendly website layouts.",
+      "Practised DOM manipulation and CSS Flexbox.",
+      "Gained exposure to Git and GitHub.",
+      "Participated in teamwork, code reviews and basic UI bug fixing.",
+    ],
+    takeaway:
+      "Strengthened practical frontend development capabilities and collaborative coding workflows through guided industry training.",
+  },
+];
+
+export const internshipExperience = internshipExperiences[0];
 
 // Verified projects: No live demo buttons, no fake repositories, no screenshots.
 export const projectsData = [
